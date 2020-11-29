@@ -10,7 +10,6 @@ st.title('Named Entity Recognition App')
 txt=st.text_area('Please input words or a sentence that you want to be analyzed for NER ')
 
 clicked=st.button('Process', key=None)
-print(type(txt))
 if clicked:
     payload="{\"text\":\""+txt+"\",\"model\":\"spacy\"}"
     headers = {
