@@ -1,9 +1,11 @@
 
-from bottle import Bottle, Response, request,post,run
-import json
+from bottle import  Response, request,post,run,get
 from ner import *
 import json
-app=Bottle()
+
+@get("/")
+def read_root():
+    return {"message": "Welcome from the API"}
 
 @post("/predict_entity")
 def predict_entity():
@@ -16,4 +18,4 @@ def predict_entity():
     return Response(json.dumps(entity_dict), status=200, mimetype='application/json')
 
 
-run(reloader=True, debug=True)
+run(host='0.0.0.0',reloader=True, debug=True,port=8080)

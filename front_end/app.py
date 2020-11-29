@@ -1,8 +1,6 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 import requests
-url = "http://127.0.0.1:8080/predict_entity"
+url = "http://api:8080/predict_entity"
 
 
 st.title('Named Entity Recognition App')
