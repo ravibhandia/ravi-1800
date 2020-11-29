@@ -1,2 +1,4 @@
-# ravi-1800
- 
+# Named Entity Recognition App
+### Built with Stanza, Spacy, Streamlit, Bottle, and Docker
+
+
